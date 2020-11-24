@@ -11,6 +11,7 @@ export default function CartScreen(props) {
     const dispatch =useDispatch();
     const cart = useSelector(state => state.cart);
     const { cartItems } = cart;
+    console.log("HEYA"+cartItems);
     useEffect(() => {
         if(productId){
             dispatch(addToCart(productId,qty));
@@ -19,7 +20,8 @@ export default function CartScreen(props) {
 
     const removeFromCartHandler = (id) => {
         //console.log("removing1"+parseInt(id));
-        dispatch(removeFromCart(parseInt(id)));
+        console.log(id);
+        dispatch(removeFromCart(id));
     };
 
     const checkoutHandler = () => {
@@ -35,6 +37,7 @@ export default function CartScreen(props) {
                 (
                     <ul>
                         {cartItems.map((item) => (
+
                             <li key={item.product}>
                                 <div className="row">
                                     <div>

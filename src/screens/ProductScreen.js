@@ -32,9 +32,6 @@ export default function ProductScreen(props) {
           :
           error ? <MessageBox variant="danger">{error}</MessageBox>
            :
-           
-        product.map((product,index)=>{
-            return (
                 <div>
            <Link to="/">Back to Result</Link>
            <div className="row top">
@@ -96,8 +93,7 @@ export default function ProductScreen(props) {
                </div>
            </div>
        </div>
-            )
-        })
+         
            
          }
             
